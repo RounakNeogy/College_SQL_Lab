@@ -1,0 +1,21 @@
+/*Creating table PRODUCT*/
+/*deleting table PRODUCT if it is already created*/
+drop table PRODUCT;  
+create table PRODUCT (
+productNo int PRIMARY KEY,
+productDesc varchar(30) NOT NULL,
+productFinish varchar(15),
+unitPrice decimal(10,2),
+qtyonHand numeric(3)
+);
+
+/*Inserting rows in the table*/
+insert into PRODUCT values (1,'End table','Cherry',175,8);
+insert into PRODUCT (productNo,productDesc,unitPrice,qtyonHand) values (2,'Table',200,4);
+
+/* Accept number for varchar*/
+insert into PRODUCT values (3,20.0,'Birch',150,5);
+
+/*Powerful SQL retieval statement used to select the entire table*/
+select * from PRODUCT; 
+
